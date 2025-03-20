@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentHub Dashboard</title>
+  <link rel="stylesheet" href="User.css">
+</head>
+<body>
+<!-- Sidebar Navigation -->
+<div class="sidebar">
+    <div class="logo">
+      <div class="logo-icon">RH</div>
+      <div class="logo-text">RentHub</div>
+    </div>
+    
+    <ul class="nav-menu">
+      <li class="nav-item active">
+        <span class="nav-icon">📊</span>
+        <span>Dashboard</span>
+      </li>
+      <li class="nav-item">
+        <span class="nav-icon">🗓️</span>
+        <span>My Rides</span>
+      </li>
+      <li class="nav-item">
+        <span class="nav-icon">🔍</span>
+        <span>Explore</span>
+      </li>
+      <li class="nav-item">
+        <span class="nav-icon">💳</span>
+        <span>Billing</span>
+      </li>
+      <li class="nav-item">
+        <span class="nav-icon">⚙️</span>
+        <span>Settings</span>
+      </li>
+      <li class="nav-item">
+        <span class="nav-icon">❓</span>
+        <span>Help Center</span>
+      </li>
+    </ul>
+    
+    <div class="referral-card">
+      <h3 class="referral-title">Invite friends & earn rewards</h3>
+      <p class="referral-text">Get 50 credits for each friend who joins!</p>
+      <button class="button">Share Invite Code</button>
+    </div>
+
+    <button class="logout-button" onclick="location.href='index.html'">
+        <span>🚪</span>
+        <span>Logout</span>
+      </button>
+      
+  </div>
+  
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <div class="header">
+      <h1 class="welcome-text">Welcome back, Alex!</h1>
+      <div class="date-display">Thursday, March 20, 2025</div>
+    </div>
+    
+    <div class="dashboard-grid">
+      <!-- User Profile Card -->
+      <div class="card user-card">
+        <div class="user-profile">
+          <div class="user-avatar">A</div>
+          <div class="user-info">
+            <h3>Alex Johnson</h3>
+            <p>Premium Member</p>
+          </div>
+        </div>
+        
+        <div class="user-stats">
+          <div class="stat-item">
+            <div class="stat-value">125</div>
+            <div class="stat-label">Credits</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">16</div>
+            <div class="stat-label">Rides</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">42</div>
+            <div class="stat-label">Miles</div>
+          </div>
+        </div>
+        
+        <button class="button">Book a New Ride</button>
+      </div>
+      
+      <!-- Map Card -->
+      <div class="card map-card">
+        <div class="card-header">
+          <div class="card-title">
+            <span>🗺️</span>
+            <span>Nearby E-Bike Stations</span>
+          </div>
+          <button class="secondary-button">View All</button>
+        </div>
+        
+        <div class="map-container">
+          <div class="map-placeholder"></div>
+          <div class="map-station station-central">8</div>
+          <div class="map-station station-riverside">12</div>
+          <div class="map-station station-downtown">5</div>
+          <div class="map-station station-tech">9</div>
+          <div class="user-marker">🏠</div>
+        </div>
+        
+        <div class="station-list">
+          <div class="station-item">
+            <div class="station-info">
+              <h4>Central Park</h4>
+              <p>0.3 miles away</p>
+            </div>
+            <div class="station-bikes">
+              <div class="bikes-count">8</div>
+              <div class="bikes-label">bikes available</div>
+            </div>
+          </div>
+          
+          <div class="station-item">
+            <div class="station-info">
+              <h4>Riverside Heights</h4>
+              <p>0.7 miles away</p>
+            </div>
+            <div class="station-bikes">
+              <div class="bikes-count">12</div>
+              <div class="bikes-label">bikes available</div>
+            </div>
+          </div>
+          
+          <div class="station-item">
+            <div class="station-info">
+              <h4>Downtown Station</h4>
+              <p>1.1 miles away</p>
+            </div>
+            <div class="station-bikes">
+              <div class="bikes-count">5</div>
+              <div class="bikes-label">bikes available</div>
+            </div>
+          </div>
+          
+          <div class="station-item">
+            <div class="station-info">
+              <h4>Tech Campus</h4>
+              <p>1.2 miles away</p>
+            </div>
+            <div class="station-bikes">
+              <div class="bikes-count">9</div>
+              <div class="bikes-label">bikes available</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Recent Rides Card -->
+      <div class="card rides-card">
+        <div class="card-header">
+          <div class="card-title">
+            <span>🚲</span>
+            <span>Recent Rides</span>
+          </div>
+          <button class="secondary-button">View All</button>
+        </div>
+        
+        <div class="ride-list">
+          <div class="ride-item">
+            <div class="ride-header">
+              <div class="ride-date">March 18, 2025</div>
+              <div class="ride-price">$8.50</div>
+            </div>
+            <div class="ride-details">
+              <div class="ride-detail">
+                <span>📏</span>
+                <span>7.2 miles</span>
+              </div>
+              <div class="ride-detail">
+                <span>⏱️</span>
+                <span>42 mins</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="ride-item">
+            <div class="ride-header">
+              <div class="ride-date">March 15, 2025</div>
+              <div class="ride-price">$6.25</div>
+            </div>
+            <div class="ride-details">
+              <div class="ride-detail">
+                <span>📏</span>
+                <span>5.5 miles</span>
+              </div>
+              <div class="ride-detail">
+                <span>⏱️</span>
+                <span>29 mins</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="ride-item">
+            <div class="ride-header">
+              <div class="ride-date">March 12, 2025</div>
+              <div class="ride-price">$12.00</div>
+            </div>
+            <div class="ride-details">
+              <div class="ride-detail">
+                <span>📏</span>
+                <span>10.1 miles</span>
+              </div>
+              <div class="ride-detail">
+                <span>⏱️</span>
+                <span>58 mins</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Upcoming Ride Card -->
+      <div class="card upcoming-card">
+        <div class="card-header">
+          <div class="card-title">
+            <span>🗓️</span>
+            <span>Upcoming Ride</span>
+          </div>
+        </div>
+        
+        <div class="upcoming-details">
+          <div class="detail-row">
+            <div class="detail-icon">📅</div>
+            <div class="detail-content">
+              <h4>Date & Time</h4>
+              <p>March 21, 2025 • 2:30 PM</p>
+            </div>
+          </div>
+          
+          <div class="detail-row">
+            <div class="detail-icon">📍</div>
+            <div class="detail-content">
+              <h4>Pickup Location</h4>
+              <p>Downtown Station</p>
+            </div>
+          </div>
+          
+          <div class="detail-row">
+            <div class="detail-icon">⚡</div>
+            <div class="detail-content">
+              <h4>Battery Status</h4>
+              <p>Fully Charged (100%)</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="button-group">
+          <button class="button">Get Directions</button>
+          <button class="button secondary-button">Modify</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

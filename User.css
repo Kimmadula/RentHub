@@ -1,0 +1,481 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+body {
+    background-color: #f5f5f7;
+    display: flex;
+    min-height: 100vh;
+  }
+:root{
+    --main-color: #fe5b3d;
+    --second-color: #ffac38;
+    --text-color: #444;
+    /*--gradient: linear-gradient(#fe5b3d, #ffac38);*/
+    --third-color: #FF6D00;
+}
+.sidebar {
+    width: 250px;
+    background-color: #1a2236;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #2d3548;
+    margin-bottom: 30px;
+  }
+  
+  .logo-icon {
+    background-color: var(--third-color);
+    color: #1a2236;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .nav-item {
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    transition: background-color 0.2s;
+  }
+  
+  .nav-item:hover {
+    background-color: #2d3548;
+  }
+  
+  .nav-item.active {
+    background-color: #3b82f6;
+  }
+  
+  .nav-icon {
+    opacity: 0.7;
+  }
+  
+  .nav-item.active .nav-icon {
+    opacity: 1;
+  }
+  
+  .referral-card {
+    margin-top: auto;
+    background-color: #2d3548;
+    padding: 15px;
+    border-radius: 12px;
+  }
+  
+  .referral-title {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  
+  .referral-text {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 15px;
+  }
+  .logout-button {
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 15px;
+    background-color: transparent;
+    color: #e2e8f0;
+    border: 1px solid #2d3548;
+    transition: all 0.2s;
+  }
+  
+  .logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #3b82f6;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .welcome-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e293b;
+  }
+  
+  .date-display {
+    color: #64748b;
+    font-size: 14px;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .user-card {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #3b82f6;
+  }
+  
+  .user-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #1e293b;
+  }
+  
+  .user-info p {
+    color: #64748b;
+    font-size: 14px;
+  }
+  
+  .user-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e293b;
+  }
+  
+  .stat-label {
+    font-size: 12px;
+    color: #64748b;
+  }
+  
+  .button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+  }
+  
+  .button:hover {
+    background-color: #2563eb;
+  }
+  
+  .secondary-button {
+    background-color: transparent;
+    border: 1px solid #cbd5e1;
+    color: #64748b;
+  }
+  
+  .secondary-button:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .map-card {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .map-container {
+    height: 350px;
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .map-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #e2e8f0 30%, #f1f5f9 38%, #f1f5f9 40%, #e2e8f0 48%);
+    background-size: 200% 100%;
+    animation: shine 2s infinite;
+  }
+  
+  @keyframes shine {
+    to {
+      background-position: 200% 0;
+    }
+  }
+  
+  .map-station {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #1e293b;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .station-central {
+    top: 40%;
+    left: 35%;
+  }
+  
+  .station-riverside {
+    top: 30%;
+    left: 60%;
+  }
+  
+  .station-downtown {
+    top: 65%;
+    left: 55%;
+  }
+  
+  .station-tech {
+    top: 50%;
+    left: 25%;
+  }
+  
+  .user-marker {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.5);
+  }
+  
+  .station-list {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .station-item {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .station-info h4 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #1e293b;
+  }
+  
+  .station-info p {
+    font-size: 13px;
+    color: #64748b;
+  }
+  
+  .station-bikes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .bikes-count {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4ade80;
+  }
+  
+  .bikes-label {
+    font-size: 12px;
+    color: #64748b;
+  }
+  
+  .rides-card {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .ride-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .ride-item {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  
+  .ride-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .ride-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .ride-date {
+    font-size: 14px;
+    color: #1e293b;
+  }
+  
+  .ride-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4ade80;
+  }
+  
+  .ride-details {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .ride-detail {
+    font-size: 13px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .upcoming-card {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .upcoming-details {
+    margin-top: 15px;
+  }
+  
+  .detail-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .detail-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+  }
+  
+  .detail-content h4 {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 3px;
+  }
+  
+  .detail-content p {
+    font-size: 15px;
+    color: #1e293b;
+    font-weight: 500;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .button-group .button {
+    flex: 1;
+  }

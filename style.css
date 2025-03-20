@@ -1,0 +1,379 @@
+/* Google Fonts */
+
+/* --------------------------------------------- Landing Page ---------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+:root{
+    --main-color: #fe5b3d;
+    --second-color: #ffac38;
+    --text-color: #444;
+    /*--gradient: linear-gradient(#fe5b3d, #ffac38);*/
+    --third-color: #FF6D00;
+}
+section{
+    padding: 50px 100px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: whitesmoke;
+    padding: 20px 100px;
+}
+.logo img {
+    width: 100px;
+}
+.navbar{
+    display: flex;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: black;
+    font-weight: 500;
+}
+.navbar a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--third-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+.header-btn a {
+    padding: 7px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.header-btn2 a {
+    padding: 7px 20px;
+    color: white;
+    font-weight: 500;
+    background-color: #000;
+}
+.header-btn2 .logout:hover {
+    background-color: #333;
+}
+
+.header-btn .sign-in{
+    background: #2362b5;
+    color: aliceblue;
+    border-radius: 0.5rem;
+}
+.header-btn .sign-in:hover{
+    background: var(--main-color);
+}
+.header-btn .sign-up{
+    background: #2362b5;
+    color: aliceblue;
+    border-radius: 0.5rem;
+}
+.header-btn .sign-up:hover{
+    background: var(--main-color);
+}
+.home {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    /*background: url(womanbike.jpg);*/
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    /*
+    margin: auto;
+    padding: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50vh;
+    */
+}
+.text-content {
+    text-align: right;
+    margin-left: auto; /* Pushes the content to the right */
+    max-width: 50%; /* Ensures text does not stretch too much */
+    transform: translateY(130%); /* Moves the text slightly downward */
+}
+.text-content h1{
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+}
+.text-content p {
+    margin: 00.5rem 0 1rem;
+}
+
+/* --------------------------------- How it works --------------------------------- */
+.ride {
+    width: 100%;
+    min-height: 85vh;
+    background: linear-gradient(to bottom, #FF6D00, #FF9E00);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+.text-content2 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.steps-container {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    max-width: 80%;
+}
+.step {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.fa-bicycle {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: var(--third-color);
+}
+.fa-calendar-days {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: var(--third-color);
+}
+.fa-square-check {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: var(--third-color);
+}
+.step h3 {
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* --------------------------------- Why choose us Section --------------------------------- */
+.WhyChooseUs {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: flex-end; /* Align content to the right */
+    width: 100%;
+    min-height: 80vh;
+    background-color: white;
+    padding: 40px;
+}
+
+.text-content3 {
+    max-width: 500px; /* Adjust width for text content */
+    text-align: left; /* Align text to the left */
+    
+}
+
+.text-content3 h2 {
+    color: #FF6D00;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom:90px; /* Reduce space below */
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.feature-list img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* --------------------------------- Footer --------------------------------- */
+footer {
+    background: var(--third-color);
+    text-align: center;
+    padding: 80px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+/* ------------------------------------- Login ------------------------------------- */
+
+.login-page {
+    background: url(image/francesco-ungaro-qgv-gOxcK4k-unsplash.jpg) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Login card */
+.login-card {
+    width: 350px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Title */
+.login-card h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Input fields */
+.login-card input[type="text"],
+.login-card input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Login button */
+.login-card input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-card input[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Remember me & Forgot Password */
+.login-card .options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: black;
+}
+
+/* Register link */
+.login-card .register {
+    margin-top: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+/* ------------------------------------- Register ------------------------------------- */
+
+.register-page {
+    background: url(lingyun-hou-JTMnOmj_1u0-unsplash.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.register-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    width: 350px;
+    text-align: center;
+}
+.register-card h2 {
+    margin-bottom: 20px;
+}
+.register-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+}
+.register-card input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.register-card input[type="submit"]:hover {
+    background-color: var(--third-color);
+}
+.register-card .login {
+    margin-top: 10px;
+    font-size: 12px;
+    color: black;
+}
+
