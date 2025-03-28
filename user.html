@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentHub</title>
+    <link rel="stylesheet" href="styles/user.css"> 
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Rent<span>Hub</span></div>
+        <div class="nav-links">
+            <a href="#">Dashboard</a>
+            <a href="#">My Bikes</a>
+            <a href="booknow.html">Book Now</a>
+            <a href="#">Support</a>
+        </div>
+            <a href="landingpage.html" class="logout-btn">Logout</a>
+    </nav>
+
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Welcome back, User!</h1>
+            <p>Here's an overview of your e-bike rentals</p>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Total Rides</h3>
+                <p>27</p>
+            </div>
+            <div class="stat-card">
+                <h3>Distance Traveled</h3>
+                <p>143 km</p>
+            </div>
+            <div class="stat-card">
+                <h3>CO₂ Saved</h3>
+                <p>32 kg</p>
+            </div>
+            <div class="stat-card">
+                <h3>Loyalty Points</h3>
+                <p>580</p>
+            </div>
+        </div>
+
+        <div class="rental-history">
+            <h2>Recent Rentals</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bike</th>
+                        <th>Model</th>
+                        <th>Date</th>
+                        <th>Duration</th>
+                        <th>Cost</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="/api/placeholder/50/50" alt="Mountain E-Bike" class="bike-image"></td>
+                        <td>Trek PowerFly 5</td>
+                        <td>Mar 18, 2025</td>
+                        <td>4 hours</td>
+                        <td>$32.00</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/api/placeholder/50/50" alt="City E-Bike" class="bike-image"></td>
+                        <td>Gazelle Ultimate C8</td>
+                        <td>Mar 15, 2025</td>
+                        <td>1 day</td>
+                        <td>$45.00</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/api/placeholder/50/50" alt="Folding E-Bike" class="bike-image"></td>
+                        <td>Brompton Electric</td>
+                        <td>Mar 10, 2025</td>
+                        <td>2 hours</td>
+                        <td>$18.50</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="upcoming-rentals">
+            <h2>Upcoming Rentals</h2>
+            <div class="rental-card">
+                <img src="/api/placeholder/50/50" alt="Mountain E-Bike" class="bike-image">
+                <div class="rental-details">
+                    <h3>Specialized Turbo Vado SL</h3>
+                    <p>Pickup Location: Downtown Hub</p>
+                </div>
+                <div class="rental-date">Mar 25, 2025</div>
+                <span class="status-badge status-active">Confirmed</span>
+            </div>
+            <div class="rental-card">
+                <img src="/api/placeholder/50/50" alt="Road E-Bike" class="bike-image">
+                <div class="rental-details">
+                    <h3>Cannondale SuperSix EVO</h3>
+                    <p>Pickup Location: Riverside Station</p>
+                </div>
+                <div class="rental-date">Apr 2, 2025</div>
+                <span class="status-badge status-active">Confirmed</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

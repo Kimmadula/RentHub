@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentHub Admin Dashboard</title>
+    <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-container">
+            <div class="logo">
+                <span>RentHub Admin</span>
+            </div>
+        </div>
+        <div class="admin-info">
+            <div class="admin-name">Michael Jackson</div>
+            <div class="admin-role">Fleet Manager</div>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active">Dashboard</a></li>
+            <li><a href="#">Bike Fleet</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Bookings</a></li>
+            <li><a href="#">Maintenance</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+        <div class="logout">
+            <a href="landingpage.html" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="topbar">
+            <h2>Dashboard</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="notification-badge">
+                <div class="badge">5</div>
+            </div>
+        </div>
+
+        <div class="dashboard-cards">
+            <div class="card">
+                <div class="card-icon">42</div>
+                <div class="card-content">
+                    <h3>Total Bikes</h3>
+                    <p>42</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">18</div>
+                <div class="card-content">
+                    <h3>Active Rentals</h3>
+                    <p>18</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">4</div>
+                <div class="card-content">
+                    <h3>Maintenance</h3>
+                    <p>4</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">₱</div>
+                <div class="card-content">
+                    <h3>Today's Revenue</h3>
+                    <p>₱1,240</p>
+                </div>
+            </div>
+        </div>
+    
+    <!-- Bike Fleet Overview -->
+        <div class="overview-container">
+            <div>
+                <h3 class="section-title">Bike Fleet Overview</h3>
+                <div class="tabs">
+                    <div class="tab active">All Bikes</div>
+                    <div class="tab">Available</div>
+                    <div class="tab">Rented</div>
+                    <div class="tab">Maintenance</div>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Bike ID</th>
+                                <th>Model</th>
+                                <th>Location</th>
+                                <th>Battery</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#BK-1042</td>
+                                <td>
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="/api/placeholder/40/40" alt="Mountain E-Bike" class="bike-image">
+                                        <span style="margin-left: 10px;">Trek PowerFly 5</span>
+                                    </div>
+                                </td>
+                                <td>Downtown Hub</td>
+                                <td>92%</td>
+                                <td><span class="status-badge status-active">Available</span></td>
+                                <td>
+                                    <button class="action-button view-btn">View</button>
+                                    <button class="action-button edit-btn">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#BK-1038</td>
+                                <td>
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="/api/placeholder/40/40" alt="City E-Bike" class="bike-image">
+                                        <span style="margin-left: 10px;">Gazelle Ultimate C8</span>
+                                    </div>
+                                </td>
+                                <td>Riverside Station</td>
+                                <td>78%</td>
+                                <td><span class="status-badge status-reserved">Rented</span></td>
+                                <td>
+                                    <button class="action-button view-btn">View</button>
+                                    <button class="action-button edit-btn">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#BK-1024</td>
+                                <td>
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="/api/placeholder/40/40" alt="Folding E-Bike" class="bike-image">
+                                        <span style="margin-left: 10px;">Brompton Electric</span>
+                                    </div>
+                                </td>
+                                <td>Central Station</td>
+                                <td>45%</td>
+                                <td><span class="status-badge status-maintenance">Maintenance</span></td>
+                                <td>
+                                    <button class="action-button view-btn">View</button>
+                                    <button class="action-button edit-btn">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#BK-1055</td>
+                                <td>
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="/api/placeholder/40/40" alt="Road E-Bike" class="bike-image">
+                                        <span style="margin-left: 10px;">Cannondale SuperSix</span>
+                                    </div>
+                                </td>
+                                <td>Downtown Hub</td>
+                                <td>88%</td>
+                                <td><span class="status-badge status-active">Available</span></td>
+                                <td>
+                                    <button class="action-button view-btn">View</button>
+                                    <button class="action-button edit-btn">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#BK-1062</td>
+                                <td>
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="/api/placeholder/40/40" alt="Mountain E-Bike" class="bike-image">
+                                        <span style="margin-left: 10px;">Specialized Turbo Levo</span>
+                                    </div>
+                                </td>
+                                <td>Park Station</td>
+                                <td>95%</td>
+                                <td><span class="status-badge status-reserved">Rented</span></td>
+                                <td>
+                                    <button class="action-button view-btn">View</button>
+                                    <button class="action-button edit-btn">Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div>
+                <h3 class="section-title">Recent Activity</h3>
+                <div class="recent-activity">
+                    <div class="activity-item">
+                        <div class="activity-icon rental-icon">R</div>
+                        <div class="activity-details">
+                            <p><span class="highlight">Sarah Johnson</span> rented a Trek PowerFly 5</p>
+                            <p class="activity-time">Today, 10:25 AM</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon maintenance-icon">M</div>
+                        <div class="activity-details">
+                            <p><span class="highlight">Brompton Electric #BK-1024</span> marked for maintenance</p>
+                            <p class="activity-time">Today, 9:14 AM</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon user-icon">U</div>
+                        <div class="activity-details">
+                            <p>New user <span class="highlight">John Smith</span> registered</p>
+                            <p class="activity-time">Today, 8:32 AM</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon rental-icon">R</div>
+                        <div class="activity-details">
+                            <p><span class="highlight">Michael Wong</span> returned a Specialized Turbo Vado</p>
+                            <p class="activity-time">Yesterday, 7:45 PM</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon maintenance-icon">M</div>
+                        <div class="activity-details">
+                            <p><span class="highlight">Gazelle Ultimate #BK-1036</span> maintenance completed</p>
+                            <p class="activity-time">Yesterday, 4:20 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h3 class="section-title">Quick Actions</h3>
+                    <div class="action-grid">
+                        <button class="quick-action-btn">
+                            <div class="action-icon">+</div>
+                            <div class="action-text">Add Bike</div>
+                        </button>
+                        <button class="quick-action-btn">
+                            <div class="action-icon">U</div>
+                            <div class="action-text">Add User</div>
+                        </button>
+                        <button class="quick-action-btn">
+                            <div class="action-icon">R</div>
+                            <div class="action-text">Create Booking</div>
+                        </button>
+                        <button class="quick-action-btn">
+                            <div class="action-icon">M</div>
+                            <div class="action-text">Schedule Maintenance</div>
+                        </button>
+                        <button class="quick-action-btn">
+                            <div class="action-icon">$</div>
+                            <div class="action-text">View Revenue</div>
+                        </button>
+                        <button class="quick-action-btn">
+                            <div class="action-icon">?</div>
+                            <div class="action-text">Support Tickets</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
