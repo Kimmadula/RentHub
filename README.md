@@ -1,4 +1,4 @@
-# RentHub
+# RentHub Website
 
 ## Missing Pages in User Page
 - My Rentals
