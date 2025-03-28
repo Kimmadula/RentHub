@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RentHub - Electric Bike Rentals</title>
-    <link rel="stylesheet" href="styles/landingpage.css">
+    <link rel="stylesheet" href="../styles/landingpage.css">
+    <script src="../script.js"></script>
 </head>
 <body>
  <!-- Header and Navigation -->
@@ -13,23 +14,23 @@
         <nav class="navbar">
             <div class="logo">Rent<span>Hub</span></div>
             <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">Bikes</a>
-                <a href="#">Locations</a>
-                <a href="#">Pricing</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
+                <a href="#hero-section">Home</a>
+                <a href="#Why-section">Why Choose Us</a>
+                <a href="#bike-section">Bikes</a>
+                <a href="#works-section">How It Works</a>
+                <a href="#reviews-section">Reviews</a>
+                <a href="#footer-section">Contact</a>
             </div>
             <div class="auth-buttons">
-                <a href="login.html" class="btn btn-outline">Login</a>
-                <a href="register.html" class="btn btn-primary">Sign Up</a>
+                <a href="/templates/login.html" class="btn btn-outline">Login</a>
+                <a href="/templates/register.html" class="btn btn-primary">Sign Up</a>
             </div>
         </nav>
     </div>
 </header>
 
 <!-- Hero Section -->
-<section class="hero">
+<section id="hero-section" class="hero">
     <div class="container">
         <div class="hero-content">
             <h1>Explore the City on Electric Bikes</h1>
@@ -42,7 +43,7 @@
 </section>
 
 <!-- Features Section -->
-<section class="features">
+<section id="Why-section" class="features">
     <div class="container">
         <div class="section-header">
             <h2>Why Choose Rent<span>Hub</span></h2>
@@ -69,7 +70,7 @@
 </section>
 
 <!-- Bike Types Section -->
-<section class="bike-types">
+<section id="bike-section" class="bike-types">
     <div class="container">
         <div class="section-header">
             <h2>Our E-Bike Fleet</h2>
@@ -77,7 +78,7 @@
         </div>
         <div class="bikes-grid">
             <div class="bike-card">
-                <img class="bike-image" src="images/cruise bike m.jpg">
+                <img class="bike-image" src="/images/cruise bike m.jpg">
                 <div class="bike-info">
                     <h3>City Cruiser</h3>
                     <p>Perfect for urban commuting with comfortable seating and storage options.</p>
@@ -86,7 +87,7 @@
                 </div>
             </div>
             <div class="bike-card">
-                <img class="bike-image" src="images/mountain explorer.jpg">
+                <img class="bike-image" src="/images/mountain explorer.jpg">
                 <div class="bike-info">
                     <h3>Mountain Explorer</h3>
                     <p>Tackle rough terrain with powerful motors and rugged tires for off-road adventures.</p>
@@ -95,7 +96,7 @@
                 </div>
             </div>
             <div class="bike-card">
-                <img class="bike-image" src="images/folding bike.jpg">
+                <img class="bike-image" src="/images/folding bike.jpg">
                 <div class="bike-info">
                     <h3>Compact Folder</h3>
                     <p>Lightweight and foldable design, perfect for combining with public transport.</p>
@@ -108,7 +109,7 @@
 </section>
 
 <!-- How It Works Section -->
-<section class="how-it-works">
+<section id="works-section" class="how-it-works">
     <div class="container">
         <div class="section-header">
             <h2>How It Works</h2>
@@ -135,7 +136,7 @@
 </section>
 
 <!-- Testimonials Section -->
-<section class="testimonials">
+<section id="reviews-section" class="testimonials">
     <div class="container">
         <div class="section-header">
             <h2>What Our Riders Say</h2>
@@ -192,7 +193,7 @@
 </section>
 
 <!-- Footer -->
-<footer>
+<footer id="footer-section">
     <div class="container">
         <div class="footer-content">
             <div class="footer-column">
