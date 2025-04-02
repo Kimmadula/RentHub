@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bike Rental - Book Now</title>
+    <link rel="stylesheet" href="/styles/user.css">
+</head>
+<body>
+
+    <script src="../script.js"></script> 
+
+    <nav class="navbar">
+        <div class="logo">Rent<span>Hub</span></div>
+        <div class="nav-links">
+            <a href="user.html">Dashboard</a>
+            <a href="myBikes.html">My Bikes</a>
+            <a href="user.html">Book Now</a>
+            <a href="#">Support</a>
+        </div>
+            <a href="landingpage.html" class="logout-btn">Logout</a>
+    </nav>
+
+    <div class="container">
+        <section class="bike-gallery">
+            <div class="bike-card">
+                <img src="/images/cruise bike m.jpg" >
+                <div class="bike-details">
+                    <h3>Urban Cruiser</h3>
+                    <p>Perfect for city commutes. Sleek design, powerful motor.</p>
+                    <p>Rental Rate: $25/day</p>
+                    <button class="book-button" value="Urban Cruiser" onclick="openModal()">Book Now</button>
+                    
+                </div>
+            </div>
+
+            <div class="bike-card">
+                <img src="/images/mountain explorer.jpg">
+                <div class="bike-details">
+                    <h3>Mountain Explorer</h3>
+                    <p>Rugged e-bike for off-road adventures. Strong battery life.</p>
+                    <p>Rental Rate: $35/day</p>
+                    <button class="book-button" value="Mountain Explorer" onclick="openModal()">Book Now</button>
+                </div>
+            </div>
+
+            <div class="bike-card">
+                <img src="/images/folding bike.jpg" >
+                <div class="bike-details">
+                    <h3>Commuter Pro</h3>
+                    <p>Lightweight and efficient. Ideal for daily urban riding.</p>
+                    <p>Rental Rate: $20/day</p>
+                    <button class="book-button" value="Commuter Pro" onclick="openModal()">Book Now</button>
+                </div>
+            </div>
+
+            <div class="bike-card">
+                <img src="/images/city racer.jpg" >
+                <div class="bike-details">
+                    <h3>City Racer</h3>
+                    <p>High-speed e-bike for urban thrill-seekers. Aerodynamic design.</p>
+                    <p>Rental Rate: $30/day</p>
+                    <button class="book-button" value="City Racer" onclick="openModal()">Book Now</button>
+                </div>
+            </div>
+            
+            <div class="bike-card">
+                <img src="/images/trailblazer.jpg" >
+                <div class="bike-details">
+                    <h3>Trail Blazer</h3>
+                    <p>All-terrain e-bike with superior shock absorption and grip.</p>
+                    <p>Rental Rate: $40/day</p>
+                    <button class="book-button" value="Trail Blazer" onclick="openModal()">Book Now</button>
+                </div>
+            </div>
+            
+            <div class="bike-card">
+                <img src="/images/cargocarrier.jpg" >
+                <div class="bike-details">
+                    <h3>Cargo Carrier</h3>
+                    <p>Heavy-duty e-bike with extended cargo space for errands.</p>
+                    <p>Rental Rate: $28/day</p>
+                    <button class="book-button" value="Cargo Carrier" onclick="openModal()">Book Now</button>
+                </div>
+            </div>
+            
+            <div class="bike-card">
+                <img src="/images/beachcruiser.jpg" >
+                <div class="bike-details">
+                    <h3>Beach Cruiser</h3>
+                    <p>Relaxed e-bike perfect for seaside rides and boardwalks.</p>
+                    <p>Rental Rate: $22/day</p>
+                    <button class="book-button" value="Beach Cruiser" onclick="openModal()">Book Now</button>
+                </div>
+            </div>
+            
+            <div class="bike-card">
+                <img src="/images/touringelite.jpg" >
+                <div class="bike-details">
+                    <h3>Touring Elite</h3>
+                    <p>Long-range e-bike with extended battery for multi-day trips.</p>
+                    <p>Rental Rate: $45/day</p>
+                    <button class="book-button" value="Touring Elite" onclick="openModal()">Book Now</button>
+                </div>
+            </div>
+            
+            <div class="bike-card">
+                <img src="/images/ecocommuter.jpg" >
+                <div class="bike-details">
+                    <h3>Eco Commuter</h3>
+                    <p>Energy-efficient e-bike with solar-assisted charging capability.</p>
+                    <p>Rental Rate: $27/day</p>
+                    <button class="book-button" value="Eco Commuter" onclick="openModal()">Book Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Modal -->
+        <div id="bookingModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <h2>Rent an E-Bike</h2>
+              <form id="rentalForm">
+                <div class="form-group">
+                  <label for="selected-bike">Selected Bike</label>
+                  <input type="text" id="selected-bike" readonly>
+                </div>
+                <div class="form-group">
+                  <label for="rental-date">Rental Date</label>
+                  <input type="date" id="rental-date" required>
+                </div>
+                <div class="form-group">
+                  <label for="rental-days">Number of Days</label>
+                  <input type="number" id="rental-days" min="1" max="30" required>
+                </div>
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" required>
+                </div>
+                <div class="button-group">
+                  <button type="submit" class="submit-button">Confirm Booking</button>
+                  <button type="button" class="cancel-button" onclick="closeModal()">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentHub Admin - Bikes</title>
+    <link rel="stylesheet" href="/styles/admin.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-container">
+            <div class="logo">
+                <span>RentHub Admin</span>
+            </div>
+        </div>
+        <div class="admin-info">
+            <div class="admin-name">Michael Jackson</div>
+            <div class="admin-role">Fleet Manager</div>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="admin.html" class="active">Bike Fleet</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+            <li><a href="maintenance.html">Maintenance</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+        <div class="logout">
+            <a href="/templates/landingpage.html" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="page-title">
+            <h2>Bikes Inventory</h2>
+            <button class="btn">+ Add New Bike</button>
+        </div>
+        
+        <div class="filter-row">
+            <div class="search-box">
+                <input type="text" placeholder="Search bikes...">
+            </div>
+            <div class="filter-dropdown">
+                <select>
+                    <option>All Status</option>
+                    <option>Available</option>
+                    <option>In Use</option>
+                    <option>Maintenance</option>
+                    <option>Out of Service</option>
+                </select>
+            </div>
+            <div class="filter-dropdown">
+                <select>
+                    <option>All Types</option>
+                    <option>Mountain Bike</option>
+                    <option>Road Bike</option>
+                    <option>Hybrid Bike</option>
+                    <option>Electric Bike</option>
+                </select>
+            </div>
+        </div>
+        
+        <table class="bike-table">
+            <thead>
+                <tr>
+                    <th>Bike ID</th>
+                    <th>Model</th>
+                    <th>Type</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                    <th>Last Service</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>BK-001</td>
+                    <td>Trek FX 2</td>
+                    <td>Hybrid Bike</td>
+                    <td>Main Station</td>
+                    <td><span class="status status-available">Available</span></td>
+                    <td>Mar 15, 2025</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="action-btn">Edit</button>
+                            <button class="action-btn">Details</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>BK-002</td>
+                    <td>Specialized Turbo</td>
+                    <td>Electric Bike</td>
+                    <td>Downtown Hub</td>
+                    <td><span class="status status-in-use">In Use</span></td>
+                    <td>Mar 22, 2025</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="action-btn">Edit</button>
+                            <button class="action-btn">Details</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>BK-003</td>
+                    <td>Cannondale Trail 5</td>
+                    <td>Mountain Bike</td>
+                    <td>Park Station</td>
+                    <td><span class="status status-maintenance">Maintenance</span></td>
+                    <td>Feb 28, 2025</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="action-btn">Edit</button>
+                            <button class="action-btn">Details</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>BK-004</td>
+                    <td>Electra Townie</td>
+                    <td>Hybrid Bike</td>
+                    <td>South Hub</td>
+                    <td><span class="status status-out-of-service">Out of Service</span></td>
+                    <td>Jan 05, 2025</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="action-btn">Edit</button>
+                            <button class="action-btn">Details</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pagination">
+            <div class="page-item">«</div>
+            <div class="page-item active">1</div>
+            <div class="page-item">2</div>
+            <div class="page-item">3</div>
+            <div class="page-item">»</div>
+        </div>
+    </div>
+</body>
+</html> 

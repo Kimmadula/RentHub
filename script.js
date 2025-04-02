@@ -11,9 +11,9 @@ document.getElementById("login-form").addEventListener("submit", function(event)
     const errorMessage = document.getElementById("errorMessage");
 
     if (email === AdminEmail && password === AdminPassword) {
-        window.location.href = "./admin.html";
+        window.location.href = "./admin/admin.html";
     } else if (email === UserEmail && password === UserPassword){
-        window.location.href = "./user.html";
+        window.location.href = "./user/user.html";
     } else {
         errorMessage.textContent = "Invalid username or password!";
     }
@@ -35,3 +35,25 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 */
+
+    function openModal() {
+        // Show the modal
+        document.getElementById("bookingModal").style.display = "flex";
+        document.getElementById("selected-bike").value = bikeName;
+    }
+
+        // Close Modal When Clicking "X" Button
+    function closeModal() {
+        document.getElementById("bookingModal").style.display = "none";
+        document.getElementById("rentalForm").reset();
+    }
+
+    document.getElementById("rentalForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Add your booking submission logic here
+        alert("Booking submitted successfully!");
+        closeModal();
+      });
+
+
+

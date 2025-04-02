@@ -205,9 +205,25 @@ header {
 }
 
 /* Bike Types Section */
+.sub-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sub-header h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.sub-header p {
+    color: white;
+    max-width: 700px;
+    margin: 0 auto;
+}
 .bike-types {
     padding: 80px 0;
-    background-color: #f8f9fa;
+    background-color: #4CAF50;
 }
 
 .bikes-grid {

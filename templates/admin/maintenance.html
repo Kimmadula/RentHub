@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentHub Admin - Maintenance</title>
+    <link rel="stylesheet" href="/styles/bookings.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-container">
+            <div class="logo">
+                <span>RentHub Admin</span>
+            </div>
+        </div>
+        <div class="admin-info">
+            <div class="admin-name">Michael Jackson</div>
+            <div class="admin-role">Fleet Manager</div>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="bikesFleet.html">Bike Fleet</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+            <li><a href="admin.html" class="active">Maintenance</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+        <div class="logout">
+            <a href="/templates/landingpage.html" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content-header">
+            <h1>Maintenance Management</h1>
+        </div>
+        
+        <div class="maintenance-form">
+            <h2 class="form-title">Schedule New Maintenance</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Bike ID</label>
+                        <select class="form-control">
+                            <option value="">Select a bike</option>
+                            <option value="EB001">EB001 - City Cruiser</option>
+                            <option value="EB002">EB002 - Mountain Explorer</option>
+                            <option value="EB003">EB003 - Urban Commuter</option>
+                            <option value="EB004">EB004 - Road Master</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Maintenance Type</label>
+                        <select class="form-control">
+                            <option value="">Select type</option>
+                            <option value="regular">Regular Service</option>
+                            <option value="repair">Repair</option>
+                            <option value="battery">Battery Check</option>
+                            <option value="tire">Tire Replacement</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Scheduled Date</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Technician</label>
+                        <select class="form-control">
+                            <option value="">Assign technician</option>
+                            <option value="tech1">John Smith</option>
+                            <option value="tech2">Maria Rodriguez</option>
+                            <option value="tech3">David Kim</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Notes</label>
+                    <textarea class="form-control" rows="3" placeholder="Add maintenance details..."></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="reset" class="btn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Schedule</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="maintenance-grid">
+            <div class="maintenance-card">
+                <div class="card-header">
+                    <div class="bike-id">EB001 - City Cruiser</div>
+                    <div class="status overdue">Overdue</div>
+                </div>
+                <div class="card-body">
+                    <div class="info-row">
+                        <div class="info-label">Type:</div>
+                        <div class="info-value">Regular Service</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Scheduled:</div>
+                        <div class="info-value">Mar 25, 2025</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Technician:</div>
+                        <div class="info-value">John Smith</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Notes:</div>
+                        <div class="info-value">Brake check and general inspection</div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn">Reschedule</button>
+                    <button class="btn btn-success">Mark Complete</button>
+                </div>
+            </div>
+            
+            <div class="maintenance-card">
+                <div class="card-header">
+                    <div class="bike-id">EB003 - Urban Commuter</div>
+                    <div class="status due">Due Today</div>
+                </div>
+                <div class="card-body">
+                    <div class="info-row">
+                        <div class="info-label">Type:</div>
+                        <div class="info-value">Battery Check</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Scheduled:</div>
+                        <div class="info-value">Apr 2, 2025</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Technician:</div>
+                        <div class="info-value">Maria Rodriguez</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Notes:</div>
+                        <div class="info-value">Battery performance check, customer reported quick drainage</div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn">Reschedule</button>
+                    <button class="btn btn-success">Mark Complete</button>
+                </div>
+            </div>
+            
+            <div class="maintenance-card">
+                <div class="card-header">
+                    <div class="bike-id">EB007 - Hill Climber</div>
+                    <div class="status completed">Completed</div>
+                </div>
+                <div class="card-body">
+                    <div class="info-row">
+                        <div class="info-label">Type:</div>
+                        <div class="info-value">Tire Replacement</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Scheduled:</div>
+                        <div class="info-value">Mar 30, 2025</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Completed:</div>
+                        <div class="info-value">Mar 30, 2025</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Technician:</div>
+                        <div class="info-value">David Kim</div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn">View Details</button>
+                </div>
+            </div>
+            
+            <div class="maintenance-card">
+                <div class="card-header">
+                    <div class="bike-id">EB004 - Road Master</div>
+                    <div class="status due">Due Tomorrow</div>
+                </div>
+                <div class="card-body">
+                    <div class="info-row">
+                        <div class="info-label">Type:</div>
+                        <div class="info-value">Regular Service</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Scheduled:</div>
+                        <div class="info-value">Apr 3, 2025</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Technician:</div>
+                        <div class="info-value">John Smith</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Notes:</div>
+                        <div class="info-value">Quarterly service check</div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn">Reschedule</button>
+                    <button class="btn btn-success">Mark Complete</button>
+                </div>
+            </div>
+        </div>
+    </div>

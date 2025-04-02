@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentHub Admin - Bookings</title>
+    <link rel="stylesheet" href="/styles/bookings.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-container">
+            <div class="logo">
+                <span>RentHub Admin</span>
+            </div>
+        </div>
+        <div class="admin-info">
+            <div class="admin-name">Michael Jackson</div>
+            <div class="admin-role">Fleet Manager</div>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="bikesFleet.html">Bike Fleet</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="admin.html" class="active">Bookings</a></li>
+            <li><a href="maintenance.html">Maintenance</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+        <div class="logout">
+            <a href="/templates/landingpage.html" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+<!-- Main Content -->
+<div class="main-content">
+    <div class="page-header">
+        <h1 class="page-title">Bookings</h1>
+        <button class="action-btn">+ New Booking</button>
+    </div>
+    
+    <!-- Stats Cards -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>Active Bookings</h3>
+            <div class="stat-value">24</div>
+        </div>
+        <div class="stat-card">
+            <h3>Today's Pickups</h3>
+            <div class="stat-value">8</div>
+        </div>
+        <div class="stat-card">
+            <h3>Today's Returns</h3>
+            <div class="stat-value">6</div>
+        </div>
+        <div class="stat-card">
+            <h3>Available Bikes</h3>
+            <div class="stat-value">42</div>
+        </div>
+    </div>
+    
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <h2 class="filter-title">Filter Bookings</h2>
+        <div class="filter-form">
+            <div class="form-group">
+                <label for="filter-status">Status</label>
+                <select id="filter-status" class="form-control">
+                    <option value="">All Statuses</option>
+                    <option value="active">Active</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="filter-start">Start Date</label>
+                <input type="date" id="filter-start" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="filter-end">End Date</label>
+                <input type="date" id="filter-end" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="filter-search">Search</label>
+                <input type="text" id="filter-search" class="form-control" placeholder="Customer name, ID, bike...">
+            </div>
+        </div>
+        <div class="filter-buttons">
+            <button class="btn-filter btn-apply">Apply Filters</button>
+            <button class="btn-filter btn-reset">Reset</button>
+        </div>
+    </div>
+    
+    <!-- Bookings Table -->
+    <div class="bookings-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Customer</th>
+                    <th>Bike Model</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#BK-2453</td>
+                    <td>Sarah Johnson</td>
+                    <td>City Cruiser Pro</td>
+                    <td>04/01/2025</td>
+                    <td>04/03/2025</td>
+                    <td>$89.97</td>
+                    <td><span class="status-badge status-active">Active</span></td>
+                    <td>
+                        <div class="row-actions">
+                            <button class="btn-row-action btn-view">View</button>
+                            <button class="btn-row-action btn-edit">Edit</button>
+                            <button class="btn-row-action btn-cancel">Cancel</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#BK-2452</td>
+                    <td>Mark Wilson</td>
+                    <td>Mountain Explorer X4</td>
+                    <td>04/02/2025</td>
+                    <td>04/04/2025</td>
+                    <td>$129.99</td>
+                    <td><span class="status-badge status-pending">Pending</span></td>
+                    <td>
+                        <div class="row-actions">
+                            <button class="btn-row-action btn-view">View</button>
+                            <button class="btn-row-action btn-edit">Edit</button>
+                            <button class="btn-row-action btn-cancel">Cancel</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#BK-2451</td>
+                    <td>Emily Cooper</td>
+                    <td>Urban Commuter S2</td>
+                    <td>03/31/2025</td>
+                    <td>04/01/2025</td>
+                    <td>$45.00</td>
+                    <td><span class="status-badge status-completed">Completed</span></td>
+                    <td>
+                        <div class="row-actions">
+                            <button class="btn-row-action btn-view">View</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#BK-2450</td>
+                    <td>David Chang</td>
+                    <td>City Cruiser Pro</td>
+                    <td>03/30/2025</td>
+                    <td>04/01/2025</td>
+                    <td>$59.98</td>
+                    <td><span class="status-badge status-cancelled">Cancelled</span></td>
+                    <td>
+                        <div class="row-actions">
+                            <button class="btn-row-action btn-view">View</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Pagination -->
+    <div class="pagination">
+        <a href="#" class="page-item">&laquo;</a>
+        <a href="#" class="page-item active">1</a>
+        <a href="#" class="page-item">2</a>
+        <a href="#" class="page-item">3</a>
+        <a href="#" class="page-item">4</a>
+        <a href="#" class="page-item">5</a>
+        <a href="#" class="page-item">&raquo;</a>
+    </div>
+</div>
+</body>
+</html>

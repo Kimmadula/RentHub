@@ -413,3 +413,197 @@ table th {
     font-size: 14px;
     font-weight: bold;
 }
+
+/******************************************** BIKE FLEET **********************************************/
+.content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 280px;
+}
+
+.page-title {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Search and filter */
+.filter-row {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.search-box {
+    flex: 1;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.filter-dropdown select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+
+/* Bike table */
+.bike-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bike-table th {
+    text-align: left;
+    padding: 12px 15px;
+    background-color: #f5f8fa;
+    border-bottom: 2px solid #ddd;
+}
+
+.bike-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.bike-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-available {
+    background-color: #e6f7ee;
+    color: #2ecc71;
+}
+
+.status-in-use {
+    background-color: #e6f0fa;
+    color: #3498db;
+}
+
+.status-maintenance {
+    background-color: #fef2e6;
+    color: #e67e22;
+}
+
+.status-out-of-service {
+    background-color: #fdeaea;
+    color: #e74c3c;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #3498db;
+}
+
+.action-btn:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+.page-item {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.page-item:hover {
+    background-color: #f5f8fa;
+}
+
+.page-item.active {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-row {
+        flex-direction: column;
+    }
+    
+    .bike-table {
+        font-size: 14px;
+    }
+}
+/******************************************** USERS **********************************************/
+/* Bike table */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table th {
+    text-align: left;
+    padding: 12px 15px;
+    background-color: #f5f8fa;
+    border-bottom: 2px solid #ddd;
+}
+
+.user-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.status-inactive {
+    background-color: #feeaeb;
+    color: #e74c3c;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentHub Admin - Users</title>
+    <link rel="stylesheet" href="/styles/admin.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-container">
+            <div class="logo">
+                <span>RentHub Admin</span>
+            </div>
+        </div>
+        <div class="admin-info">
+            <div class="admin-name">Michael Jackson</div>
+            <div class="admin-role">Fleet Manager</div>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="bikesFleet.html">Bike Fleet</a></li>
+            <li><a href="admin.html" class="active">Users</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+            <li><a href="maintenance.html">Maintenance</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+        <div class="logout">
+            <a href="/templates/landingpage.html" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="page-title">
+            <h2>Users</h2>
+            <button class="btn">+ Add New Users</button>
+        </div>
+        
+        <div class="filter-row">
+            <div class="search-box">
+                <input type="text" placeholder="Search bikes...">
+            </div>
+            <div class="filter-dropdown">
+                <select>
+                    <option>All Roles</option>
+                    <option>Customer</option>
+                    <option>Manager</option>
+                    <option>Admin</option>
+                </select>
+            </div>
+            <div class="filter-dropdown">
+                <select>
+                    <option>All Status</option>
+                    <option>Active</option>
+                    <option>Inactive</option>
+                    <option>Pending</option>
+                </select>
+            </div>
+        </div>
+        
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Join Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>USR-001</td>
+                    <td>John Smith</td>
+                    <td>john.smith@example.com</td>
+                    <td>Customer</td>
+                    <td><span class="status status-active">Active</span></td>
+                    <td>Mar 15, 2025</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="action-btn">Edit</button>
+                            <button class="action-btn">Details</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>USR-002</td>
+                    <td>Emma Davis</td>
+                    <td>emma.d@example.com</td>
+                    <td>Customer</td>
+                    <td><span class="status status-inactive">Inactive</span></td>
+                    <td>Feb 15, 2025</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="action-btn">Edit</button>
+                            <button class="action-btn">Details</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>USR-003</td>
+                    <td>Sarah Johnson</td>
+                    <td>sarah.j@example.com</td>
+                    <td>Customer</td>
+                    <td><span class="status status-active">Active</span></td>
+                    <td>Mar 10, 2025</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="action-btn">Edit</button>
+                            <button class="action-btn">Details</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pagination">
+            <div class="page-item">«</div>
+            <div class="page-item active">1</div>
+            <div class="page-item">2</div>
+            <div class="page-item">3</div>
+            <div class="page-item">»</div>
+        </div>
+    </div>
+</body>
+</html> 
