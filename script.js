@@ -2,6 +2,8 @@ const AdminEmail = "admin@gmail.com";
 const AdminPassword = "123";
 const UserEmail = "user@gmail.com";
 const UserPassword = "321";
+const StaffEmail = "staff@gmail.com";
+const StaffPassword = "456";
 
 document.getElementById("login-form").addEventListener("submit", function(event) {
     event.preventDefault(); 
@@ -11,9 +13,11 @@ document.getElementById("login-form").addEventListener("submit", function(event)
     const errorMessage = document.getElementById("errorMessage");
 
     if (email === AdminEmail && password === AdminPassword) {
-        window.location.href = "./admin/admin.html";
+        window.location.href = "./admin/dashboard.html";
     } else if (email === UserEmail && password === UserPassword){
-        window.location.href = "./user/user.html";
+        window.location.href = "./user/dashboard.html";
+    } else if (email === StaffEmail && password === StaffPassword){
+        window.location.href = "./staff/staff.html";
     } else {
         errorMessage.textContent = "Invalid username or password!";
     }

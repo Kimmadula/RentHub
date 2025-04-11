@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+        
+body {
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+:root{
+    --main-color: #4CAF50;
+     --second-color: #ffac38;
+    --text-color: #444;
+    /*--gradient: linear-gradient(#fe5b3d, #ffac38);*/
+    --third-color: #FF6D00;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.logout-btn {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.my-bikes-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.my-bike-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.my-bike-card:hover {
+    transform: scale(1.03);
+}
+
+.my-bike-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.my-bike-details {
+    padding: 20px;
+}
+
+.my-bike-details h3 {
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.my-bike-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.my-bike-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.status-active {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: var(--main-color);
+}
+
+.status-completed {
+    background-color: rgba(158, 158, 158, 0.2);
+    color: #9e9e9e;
+}
+
+.my-bike-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.my-btn {
+    flex-grow: 1;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.my-btn-extend {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.my-btn-extend:hover {
+    background-color: #45a049;
+}
+
+.my-btn-cancel {
+    background-color: #f5f7fa;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+.my-btn-cancel:hover {
+    background-color: #e0e0e0;
+}
+
+.my-no-bikes {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}

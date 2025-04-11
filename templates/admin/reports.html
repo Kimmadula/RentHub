@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RentHub Admin - Reports</title>
-    <link rel="stylesheet" href="/styles/bookings.css">
+    <link rel="stylesheet" href="/styles/admin/reports.css">
 </head>
 <body>
     <div class="sidebar">
@@ -18,15 +18,149 @@
             <div class="admin-role">Fleet Manager</div>
         </div>
         <ul class="sidebar-menu">
-            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
             <li><a href="bikesFleet.html">Bike Fleet</a></li>
             <li><a href="users.html">Users</a></li>
             <li><a href="bookings.html">Bookings</a></li>
             <li><a href="maintenance.html">Maintenance</a></li>
-            <li><a href="admin.html" class="active">Reports</a></li>
+            <li><a href="dashboard.html" class="active">Reports</a></li>
             <li><a href="settings.html">Settings</a></li>
         </ul>
         <div class="logout">
             <a href="/templates/landingpage.html" class="logout-btn">Logout</a>
         </div>
     </div>
+
+<!-- Main Content-->
+<div class="main-content">
+    <div class="page-header">
+        <h1 class="page-title">Reports Dashboard</h1>
+        <div class="date-filter">
+            <input type="date" class="date-input" value="2025-04-01">
+            <span>to</span>
+            <input type="date" class="date-input" value="2025-04-11">
+            <button class="filter-btn">Apply Filter</button>
+        </div>
+    </div>
+    
+    <div class="stats-cards">
+        <div class="stat-card">
+            <h3>Total Rentals</h3>
+            <div class="value">1,287</div>
+            <div class="trend up">↑ 8.5% vs last month</div>
+        </div>
+        <div class="stat-card">
+            <h3>Revenue</h3>
+            <div class="value">$24,156</div>
+            <div class="trend up">↑ 12.3% vs last month</div>
+        </div>
+        <div class="stat-card">
+            <h3>Active Rentals</h3>
+            <div class="value">47</div>
+            <div class="trend down">↓ 3.2% vs last month</div>
+        </div>
+        <div class="stat-card">
+            <h3>Avg. Rental Duration</h3>
+            <div class="value">2.8 days</div>
+            <div class="trend up">↑ 0.5% vs last month</div>
+        </div>
+    </div>
+    
+    <div class="charts-container">
+        <div class="chart-card">
+            <div class="chart-header">
+                <h2 class="chart-title">Rental Performance</h2>
+                <select>
+                    <option>This Month</option>
+                    <option>Last 3 Months</option>
+                    <option>Last 6 Months</option>
+                    <option>This Year</option>
+                </select>
+            </div>
+            <div class="chart-placeholder">
+                <img src="/api/placeholder/600/300" alt="Monthly Rental Trends Graph">
+            </div>
+        </div>
+        <div class="chart-card">
+            <div class="chart-header">
+                <h2 class="chart-title">Popular Bikes</h2>
+                <select>
+                    <option>This Month</option>
+                    <option>Last 3 Months</option>
+                </select>
+            </div>
+            <div class="chart-placeholder">
+                <img src="/api/placeholder/300/300" alt="Popular Bikes Pie Chart">
+            </div>
+        </div>
+    </div>
+    
+    <div class="recent-rentals">
+        <div class="table-header">
+            <h2 class="chart-title">Recent Rentals</h2>
+            <a href="#" class="view-all">View All</a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rental ID</th>
+                    <th>Customer</th>
+                    <th>Bike Model</th>
+                    <th>Rental Date</th>
+                    <th>Return Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#RNT8796</td>
+                    <td>John Miller</td>
+                    <td>Mountain E-Bike X3</td>
+                    <td>Apr 10, 2025</td>
+                    <td>Apr 12, 2025</td>
+                    <td>$89.99</td>
+                    <td><span class="status active">Active</span></td>
+                </tr>
+                <tr>
+                    <td>#RNT8795</td>
+                    <td>Sarah Johnson</td>
+                    <td>City Cruiser 2000</td>
+                    <td>Apr 09, 2025</td>
+                    <td>Apr 11, 2025</td>
+                    <td>$64.50</td>
+                    <td><span class="status active">Active</span></td>
+                </tr>
+                <tr>
+                    <td>#RNT8794</td>
+                    <td>Mark Williams</td>
+                    <td>Urban Commuter Pro</td>
+                    <td>Apr 08, 2025</td>
+                    <td>Apr 10, 2025</td>
+                    <td>$72.25</td>
+                    <td><span class="status returned">Returned</span></td>
+                </tr>
+                <tr>
+                    <td>#RNT8793</td>
+                    <td>Emily Davis</td>
+                    <td>Folding E-Bike Mini</td>
+                    <td>Apr 07, 2025</td>
+                    <td>Apr 08, 2025</td>
+                    <td>$39.99</td>
+                    <td><span class="status returned">Returned</span></td>
+                </tr>
+                <tr>
+                    <td>#RNT8792</td>
+                    <td>Robert Chen</td>
+                    <td>Mountain E-Bike X3</td>
+                    <td>Apr 05, 2025</td>
+                    <td>Apr 08, 2025</td>
+                    <td>$129.99</td>
+                    <td><span class="status late">Late</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
